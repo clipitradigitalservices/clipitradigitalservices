@@ -1,1 +1,24 @@
+name: Build and Deploy
 
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Inject Web3Forms API Key
+      run: |
+        sed -i 's/WEB3FORMS_ACCESS_KEY_PLACEHOLDER/${{ secrets.wpkey }}/g' index.html
+
+    - name: Upload Artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: website-build
+        path: .
