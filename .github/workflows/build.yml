@@ -2,28 +2,49 @@ name: Build and Deploy
 
 on:
   push:
-    branches: [ "main" ]
+    branches: ["main"]
   pull_request:
-    branches: [ "main" ]
+    branches: ["main"]
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-    - name: Inject Web3Forms API Key
-      run: |
-        sed -i 's/WEB3FORMS_ACCESS_KEY_PLACEHOLDER/${{ secrets.WPKEY }}/g' index.html
+      - name: Inject Web3Forms API Key
+        env:
+          WPKEY: ${{ secrets.WPKEY }}
+        run: |
+          if [ -z "$WPKEY" ]; then
+            echo "Error: WPKEY secret is empty" >&2
+            exit 1
+          fi
 
-    - name: Setup Pages
-      uses: actions/configure-pages@v4
+          if [ ! -f index.html ]; then
+            echo "Error: index.html not found" >&2
+            exit 1
+          fi
 
-    - name: Upload artifact
-      uses: actions/upload-pages-artifact@v3
-      with:
-        path: '.'
+          # Replace placeholder with the secret
+          sed -i "s/WEB3FORMS_ACCESS_KEY_PLACEHOLDER/${WPKEY}/g" index.html
+
+          # Verify replacement
+          if grep -q "WEB3FORMS_ACCESS_KEY_PLACEHOLDER" index.html; then
+            echo "Error: placeholder still present after sed" >&2
+            exit 1
+          fi
+
+          echo "Web3Forms key injected into index.html"
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: '.'
 
   deploy:
     environment:
@@ -34,6 +55,7 @@ jobs:
     permissions:
       pages: write
       id-token: write
+
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
