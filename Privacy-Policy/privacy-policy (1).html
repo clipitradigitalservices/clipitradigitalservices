@@ -1,0 +1,663 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Match Story Animals — Privacy Policy</title>
+  <meta name="description" content="Privacy Policy for Match Story Animals by Clipitra Digital Services LLP. Last updated: December 25, 2024." />
+  <style>
+    :root{
+      --bg-1: #060814;
+      --bg-2: #061226;
+      --card: rgba(255,255,255,0.03);
+      --muted: #9fb0c8;
+      --accent: #7c3aed;
+      --accent-2: #06b6d4;
+      --glass: rgba(255,255,255,0.035);
+      --glass-2: rgba(255,255,255,0.02);
+      --radius:14px;
+      --max-width:1100px;
+      --gap:22px;
+      --text:#e6eef8;
+      --heading:#ffffff;
+      --shadow: 0 10px 30px rgba(2,6,23,0.6);
+      --glass-border: rgba(255,255,255,0.04);
+      --fade-duration: 520ms;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+
+    /* reduce motion */
+    @media (prefers-reduced-motion: reduce) {
+      :root { --fade-duration: 1ms; }
+      * { scroll-behavior: auto !important; }
+    }
+
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      color:var(--text);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      padding:34px 18px;
+      display:flex;
+      justify-content:center;
+      align-items:flex-start;
+      background: radial-gradient(1200px 600px at 10% 10%, rgba(124,58,237,0.08), transparent 10%),
+                  radial-gradient(900px 500px at 90% 80%, rgba(6,182,212,0.06), transparent 12%),
+                  linear-gradient(180deg, var(--bg-1) 0%, var(--bg-2) 100%);
+      transition: background-color var(--fade-duration) ease;
+    }
+
+    .wrap{
+      width:100%;
+      max-width:var(--max-width);
+      display:grid;
+      grid-template-columns: 320px 1fr;
+      gap:var(--gap);
+      align-items:start;
+      align-content:start;
+      position:relative;
+      transform:translateZ(0);
+    }
+
+    header.site {
+      grid-column:1 / -1;
+      display:flex;
+      align-items:center;
+      gap:18px;
+      margin-bottom:6px;
+      padding:6px 4px;
+    }
+
+    /* animated logo */
+    .logo {
+      width:72px;
+      height:72px;
+      border-radius:16px;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      color:white;
+      font-weight:700;
+      box-shadow: 0 8px 30px rgba(12,20,40,0.6), inset 0 -6px 20px rgba(255,255,255,0.03);
+      flex:0 0 72px;
+      transform-origin: center;
+      transition: transform 320ms cubic-bezier(.2,.9,.3,1), box-shadow 320ms ease;
+      will-change: transform;
+      position:relative;
+      overflow:hidden;
+    }
+    .logo::after{
+      content:"";
+      position:absolute;
+      inset:0;
+      background: linear-gradient(120deg, rgba(255,255,255,0.06), rgba(255,255,255,0.01));
+      mix-blend-mode: overlay;
+      opacity:0.9;
+    }
+    .logo:hover{ transform: translateY(-6px) rotate(-4deg) scale(1.02); box-shadow: 0 18px 40px rgba(12,20,40,0.7); }
+
+    .logo .letters{
+      font-size:18px;
+      letter-spacing:0.6px;
+      transform:translateY(1px);
+      text-shadow: 0 2px 10px rgba(0,0,0,0.4);
+    }
+
+    .title {
+      display:flex;
+      flex-direction:column;
+      gap:6px;
+      user-select:none;
+    }
+    .title h1{
+      margin:0;
+      color:var(--heading);
+      font-size:20px;
+      line-height:1;
+      letter-spacing:0.2px;
+      text-shadow: 0 6px 24px rgba(124,58,237,0.08);
+      transform-origin:left center;
+      transition: transform var(--fade-duration) ease, color var(--fade-duration) ease;
+    }
+    .title .meta{
+      color:var(--muted);
+      font-size:13px;
+    }
+
+    /* floating faint background shapes */
+    .bg-shape {
+      position:absolute;
+      border-radius:50%;
+      filter: blur(36px);
+      opacity:0.06;
+      pointer-events:none;
+      mix-blend-mode: screen;
+      transform: translate3d(0,0,0);
+    }
+    .bg-shape.shape-a{ width:420px; height:420px; left:-120px; top:-120px; background: linear-gradient(180deg,var(--accent), #a78bfa);}
+    .bg-shape.shape-b{ width:320px; height:320px; right:-80px; bottom:-140px; background: linear-gradient(180deg,var(--accent-2), #67e8f9); opacity:0.045;}
+
+    nav.toc {
+      background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      border-radius:var(--radius);
+      padding:18px;
+      position:sticky;
+      top:28px;
+      height:calc(100vh - 56px);
+      overflow:auto;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--glass-border);
+      backdrop-filter: blur(8px) saturate(120%);
+    }
+    nav.toc h2{
+      margin:0 0 12px 0;
+      font-size:15px;
+      color:var(--heading);
+    }
+    nav.toc ul{
+      margin:0;
+      padding:0;
+      list-style:none;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    nav.toc a{
+      color:var(--muted);
+      text-decoration:none;
+      padding:10px 12px;
+      border-radius:12px;
+      display:block;
+      font-size:14px;
+      transition: background 220ms ease, color 220ms ease, transform 220ms ease;
+      transform-origin:left center;
+    }
+    nav.toc a:hover,
+    nav.toc a:focus{
+      background: linear-gradient(90deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      color:var(--text);
+      transform: translateX(6px);
+    }
+    nav.toc a.active {
+      background: linear-gradient(90deg, rgba(124,58,237,0.12), rgba(6,182,212,0.06));
+      color:var(--text);
+      box-shadow: 0 6px 20px rgba(12,20,40,0.35);
+    }
+
+    .card {
+      background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      padding:28px;
+      border-radius:var(--radius);
+      box-shadow: var(--shadow);
+      color:var(--text);
+      border: 1px solid var(--glass-border);
+      backdrop-filter: blur(6px) saturate(120%);
+      transition: transform var(--fade-duration) cubic-bezier(.2,.9,.3,1), box-shadow var(--fade-duration) ease;
+    }
+
+    main.policy {
+      min-height:60vh;
+      overflow:visible;
+    }
+
+    .section {
+      margin-bottom:22px;
+      opacity:0;
+      transform: translateY(18px) scale(0.997);
+      transition: opacity var(--fade-duration) ease, transform var(--fade-duration) cubic-bezier(.2,.9,.3,1);
+      will-change: opacity, transform;
+      border-radius:10px;
+      padding:10px;
+    }
+    .section.visible {
+      opacity:1;
+      transform: translateY(0) scale(1);
+    }
+    .section h3{
+      margin:0 0 8px 0;
+      color:var(--accent-2);
+      font-size:17px;
+      display:flex;
+      align-items:center;
+      gap:10px;
+    }
+    .section h4{
+      margin:10px 0 8px 0;
+      color:var(--accent);
+      font-size:15px;
+    }
+    p, li {
+      color:var(--muted);
+      line-height:1.6;
+      margin:8px 0;
+      font-size:15px;
+    }
+    ul{padding-left:18px}
+    .badge {
+      display:inline-block;
+      padding:8px 12px;
+      background:rgba(124,58,237,0.12);
+      color:var(--accent);
+      border-radius:999px;
+      font-weight:600;
+      font-size:13px;
+    }
+    .meta-row {
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+      margin-top:12px;
+      align-items:center;
+    }
+    footer.sitefoot{
+      grid-column: 1 / -1;
+      margin-top:12px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      color:var(--muted);
+      font-size:13px;
+    }
+
+    /* improved table-of-contents micro-interaction (indicator) */
+    nav.toc .indicator {
+      position:sticky;
+      top:28px;
+      height:6px;
+      background: linear-gradient(90deg,var(--accent),var(--accent-2));
+      border-radius:6px;
+      margin-bottom:10px;
+      box-shadow: 0 6px 18px rgba(124,58,237,0.08);
+      opacity:0.95;
+    }
+
+    /* small screens */
+    @media (max-width:980px){
+      .wrap{ grid-template-columns: 1fr; padding-bottom:40px }
+      nav.toc{ position:relative; height:auto; order:2; display:block; margin-top:10px }
+      .card{ order:1 }
+      .logo{ width:56px; height:56px; flex:0 0 56px; border-radius:12px; }
+      .title h1{ font-size:18px }
+    }
+
+    /* print */
+    @media print {
+      body{ background: #fff; color:#000; padding:0; }
+      nav.toc, .logo, .bg-shape { display:none }
+      .wrap{ max-width:100%; width:100% }
+      .card { box-shadow:none; border-radius:0; padding:12px }
+    }
+
+    .small-note{ font-size:13px; color:var(--muted) }
+
+    /* subtle section accent */ 
+    .section .pill {
+      display:inline-block;
+      padding:6px 10px;
+      background: linear-gradient(90deg, rgba(255,255,255,0.02), rgba(255,255,255,0.004));
+      border: 1px solid rgba(255,255,255,0.02);
+      color:var(--muted);
+      border-radius:10px;
+      font-size:13px;
+      margin-bottom:10px;
+    }
+
+    /* focus outlines for accessibility */
+    a:focus, button:focus {
+      outline: 3px solid rgba(6,182,212,0.14);
+      outline-offset:2px;
+      border-radius:8px;
+    }
+  </style>
+</head>
+<body>
+  <div class="bg-shape shape-a" aria-hidden="true"></div>
+  <div class="bg-shape shape-b" aria-hidden="true"></div>
+
+  <div class="wrap" role="main" aria-labelledby="policy-title">
+    <header class="site">
+      <div class="logo" aria-hidden="true" title="Match Story Animals">
+        <div class="letters" aria-hidden="true">MSA</div>
+      </div>
+      <div class="title">
+        <h1 id="policy-title">Match Story Animals — Privacy Policy</h1>
+        <div class="meta">Clipitra Digital Services LLP · Last Updated: December 25, 2024</div>
+      </div>
+    </header>
+
+    <nav class="toc card" aria-label="Table of contents">
+      <div class="indicator" aria-hidden="true"></div>
+      <h2>Contents</h2>
+      <ul>
+        <li><a href="#introduction" class="anchor">1. Introduction</a></li>
+        <li><a href="#information-we-collect" class="anchor">2. Information We Collect</a></li>
+        <li><a href="#how-we-use" class="anchor">3. How We Use Information</a></li>
+        <li><a href="#data-sharing" class="anchor">4. Data Sharing & Third Parties</a></li>
+        <li><a href="#storage-security" class="anchor">5. Data Storage & Security</a></li>
+        <li><a href="#rights-choices" class="anchor">6. Your Rights & Choices</a></li>
+        <li><a href="#children" class="anchor">7. Children's Privacy</a></li>
+        <li><a href="#transfers" class="anchor">8. International Transfers</a></li>
+        <li><a href="#gdpr" class="anchor">9. GDPR (EEA / UK / CH)</a></li>
+        <li><a href="#ccpa" class="anchor">10. California (CCPA)</a></li>
+        <li><a href="#changes" class="anchor">11. Changes to Policy</a></li>
+        <li><a href="#links" class="anchor">12. Third-Party Links</a></li>
+        <li><a href="#breach" class="anchor">13. Data Breach</a></li>
+        <li><a href="#contact" class="anchor">14. Contact</a></li>
+        <li><a href="#permissions" class="anchor">15. Permissions Used</a></li>
+      </ul>
+    </nav>
+
+    <main class="card policy" id="policy" tabindex="-1">
+      <section id="introduction" class="section">
+        <div class="pill">Last Updated: December 25, 2024</div>
+        <h3>1. Introduction</h3>
+        <p>This Privacy Policy explains how Clipitra Digital Services LLP ("we", "us", "our") collects, uses, and protects information when you use our mobile game application "Match Story Animals" (the "Game" or "App"). By downloading, accessing, or using the Game, you agree to the collection and use of information described in this policy.</p>
+      </section>
+
+      <section id="information-we-collect" class="section">
+        <h3>2. Information We Collect</h3>
+
+        <h4>2.1 Information You Provide Directly — Optional Username</h4>
+        <p>You may set a custom username when you first launch the Game. If you don't provide one, a random name is generated. This username is stored locally on your device only and is not transmitted to our servers. You can change it anytime in profile settings.</p>
+
+        <h4>2.2 Information Collected Automatically</h4>
+        <p>All game progress and settings are stored locally on your device using Unity's PlayerPrefs system. Examples include:</p>
+        <ul>
+          <li>Game Progress: current level, level index, power-up unlock status</li>
+          <li>In-Game Currency: coin balance and power-up quantities</li>
+          <li>Game Settings: sound volume and music volume preferences</li>
+          <li>Power-Up Data: Undo, TimeFreeze, AutoMatch, Energy counts</li>
+        </ul>
+        <p><strong>Important:</strong> All game progress data is stored locally on your device only and is never transmitted to external servers or shared with third parties.</p>
+
+        <h4>2.3 Purchase Information</h4>
+        <p>When you make in-app purchases (IAP) through Google Play or Apple App Store:</p>
+        <ul>
+          <li>Transaction processing is handled entirely by Google Play or Apple App Store.</li>
+          <li>We receive only a purchase receipt validation from the app store to verify the transaction.</li>
+          <li>We store a local flag on your device to track non-consumable purchases.</li>
+          <li>We do not collect, store, or have access to your payment card information — all payment data is handled by Google/Apple.</li>
+        </ul>
+        <p>Third-party service used: Unity In-App Purchasing (IAP) — Purpose: facilitate in-app purchases; Data processed: purchase receipts; See Unity's Privacy Policy for details.</p>
+
+        <h4>2.4 Information We Do NOT Collect</h4>
+        <p>We explicitly do not collect, store, or transmit:</p>
+        <ul>
+          <li>Personal identifiable information (name, email, phone, address)</li>
+          <li>Device identifiers (IMEI, MAC, Android ID)</li>
+          <li>Location data (GPS or approximate location)</li>
+          <li>Photos, camera, or microphone data</li>
+          <li>Contacts or calendar information</li>
+          <li>User behavior tracking or analytics data</li>
+          <li>Advertising identifiers (GAID, IDFA)</li>
+        </ul>
+      </section>
+
+      <section id="how-we-use" class="section">
+        <h3>3. How We Use Information</h3>
+        <p>The data we store locally on your device is used only to:</p>
+        <ul>
+          <li>Provide game functionality (save progress between sessions, track power-ups, maintain coin balance, store volume preferences, remember username).</li>
+          <li>Process In-App Purchases — verify receipt validity, grant purchased items, and prevent duplicate non-consumable purchases.</li>
+          <li>We do not use any data for advertising or marketing. The Game is ad-free and we do not track users for marketing.</li>
+        </ul>
+      </section>
+
+      <section id="data-sharing" class="section">
+        <h3>4. Data Sharing and Third-Party Services</h3>
+
+        <h4>4.1 Third-Party Services Used</h4>
+        <ul>
+          <li><strong>Unity Engine</strong> — Purpose: game development platform. No personal data is shared; Unity runs locally on the device.</li>
+          <li><strong>Unity In-App Purchasing (IAP)</strong> — Purpose: process purchases. Data shared limited to purchase receipt validation handled by Google/Apple.</li>
+          <li><strong>Google Play Store / Apple App Store</strong> — Purpose: app distribution and payment processing; transactions handled by the stores and subject to their privacy policies.</li>
+        </ul>
+
+        <h4>4.2 No Data Selling or Advertising Networks</h4>
+        <p>We do not sell, rent, or trade your information. We do not share data with advertising networks, use analytics/tracking services, or share data with data brokers or marketers.</p>
+
+        <h4>4.3 Legal Requirements</h4>
+        <p>We may disclose information if required by law or valid public authority requests (e.g., court orders). Given the minimal data we collect and local-only storage, such disclosures are unlikely.</p>
+      </section>
+
+      <section id="storage-security" class="section">
+        <h3>5. Data Storage and Security</h3>
+
+        <h4>5.1 Local Storage Only</h4>
+        <p>All game data is stored locally using Unity PlayerPrefs (a local key-value store). Storage location is your device's internal private app storage and is accessible only by the Game app.</p>
+
+        <h4>5.2 Security Measures</h4>
+        <ul>
+          <li>App sandboxing on Android/iOS prevents other apps from accessing game data.</li>
+          <li>No network transmission of game progress data — it stays on device.</li>
+          <li>Secure receipt validation uses Google Play/App Store mechanisms.</li>
+          <li>Regular updates to the Game address security vulnerabilities.</li>
+        </ul>
+
+        <h4>5.3 Data Retention</h4>
+        <p>Local game data is retained on your device until you uninstall the app or clear app data. Purchase history is maintained by Google Play/App Store per their policies. We do not maintain any user data on our servers.</p>
+      </section>
+
+      <section id="rights-choices" class="section">
+        <h3>6. Your Rights and Choices</h3>
+
+        <h4>6.1 Access and Deletion</h4>
+        <p>All your game data is stored locally. You can view username, level progress, and coin balance within the Game.</p>
+        <p>To delete all game data:</p>
+        <ul>
+          <li>On Android: Settings &gt; Apps &gt; Match Story Animals &gt; Storage &gt; Clear Data</li>
+          <li>On iOS: Uninstall the app (removes local data)</li>
+        </ul>
+        <p>Important: Because we do not store backups, deleted progress cannot be recovered.</p>
+
+        <h4>6.2 Purchase Information</h4>
+        <p>Purchase history is maintained by the app stores. We only keep a local flag for non-consumable purchases; to manage purchase details, use your Google/Apple account settings.</p>
+
+        <h4>6.3 Username Changes</h4>
+        <p>You can change your username anytime in the profile/settings panel in the Game.</p>
+      </section>
+
+      <section id="children" class="section">
+        <h3>7. Children's Privacy (COPPA & Age-Appropriate Design)</h3>
+
+        <h4>7.1 Age Requirements</h4>
+        <p>The Game is family-friendly and suitable for all ages, including children under 13.</p>
+
+        <h4>7.2 COPPA Compliance</h4>
+        <p>We comply with COPPA. We do not knowingly collect personal information from children under 13. The optional username is stored locally only, and no persistent identifiers or behavioral advertising are used.</p>
+
+        <h4>7.3 Parental Rights</h4>
+        <p>Parents/guardians can delete local data by clearing app data or uninstalling and can contact us with privacy concerns (see Contact section).</p>
+      </section>
+
+      <section id="transfers" class="section">
+        <h3>8. International Data Transfers</h3>
+        <p>Since all game data is stored locally and not transmitted to external servers, no international data transfers occur. Receipt validation for IAP uses Google/Apple infrastructure and is subject to their policies.</p>
+      </section>
+
+      <section id="gdpr" class="section">
+        <h3>9. GDPR Compliance (EU/EEA, UK, Switzerland)</h3>
+
+        <h4>9.1 Legal Basis for Processing</h4>
+        <p>Local game data processing is based on legitimate interests (providing game functionality) and contract performance (fulfilling purchases).</p>
+
+        <h4>9.2 Your GDPR Rights</h4>
+        <p>You have the right to access, rectify, erase (by clearing/uninstalling), and object to processing (by uninstalling). Data portability is not applicable because we do not store data on servers.</p>
+
+        <h4>9.3 No Automated Decision-Making</h4>
+        <p>We do not use profiling or automated decision-making that produces legal effects.</p>
+      </section>
+
+      <section id="ccpa" class="section">
+        <h3>10. California Privacy Rights (CCPA)</h3>
+
+        <h4>10.1 Information We Collect</h4>
+        <p>See Section 2 — we collect only minimal locally-stored game data.</p>
+
+        <h4>10.2 Your CCPA Rights</h4>
+        <ul>
+          <li>Know what data is collected (Section 2)</li>
+          <li>Delete: clear app storage</li>
+          <li>Opt-Out of Sale: not applicable — we do not sell personal information</li>
+          <li>Non-Discrimination: we do not discriminate for exercising privacy rights</li>
+        </ul>
+
+        <h4>10.3 Do Not Sell My Personal Information</h4>
+        <p>We do not sell personal information and have never sold personal information.</p>
+      </section>
+
+      <section id="changes" class="section">
+        <h3>11. Changes to This Privacy Policy</h3>
+        <p>We may update this policy to reflect changes in data practices, legal requirements, or new features. Material changes will be communicated via an in-app notice or app update description. The "Last Updated" date at the top will be revised. Continued use after changes means you accept the updated policy.</p>
+      </section>
+
+      <section id="links" class="section">
+        <h3>12. Third-Party Links</h3>
+        <p>The Game does not contain links to third-party websites or services. App store interactions are subject to Google Play and Apple App Store privacy policies when you access them.</p>
+      </section>
+
+      <section id="breach" class="section">
+        <h3>13. Data Breach Notification</h3>
+        <p>In the unlikely event of a data breach affecting your information, we will notify affected users as required by law. Given that data is stored locally and no servers are maintained, breach risk from our side is minimal.</p>
+      </section>
+
+      <section id="contact" class="section">
+        <h3>14. Contact Us</h3>
+        <p>If you have questions, concerns, or requests regarding this Privacy Policy or our data practices, contact us at:</p>
+        <p><strong>Email:</strong> <a href="mailto:help.clipitradigitalservices@gmail.com">help.clipitradigitalservices@gmail.com</a></p>
+      </section>
+
+      <section id="permissions" class="section">
+        <h3>15. Permissions Used</h3>
+
+        <h4>15.1 Android Permissions</h4>
+        <p><strong>INTERNET Permission:</strong> Required by Unity IAP to validate purchase receipts with Google Play. Usage is limited to purchase verification; no other network activity for game telemetry or analytics occurs.</p>
+        <p>No other permissions are required by the Game.</p>
+      </section>
+
+      <div class="meta-row">
+        <div class="small-note">Clipitra Digital Services LLP — Match Story Animals</div>
+        <div class="small-note">Last Updated: December 25, 2024</div>
+      </div>
+    </main>
+
+    <footer class="sitefoot">
+      <div>© Clipitra Digital Services LLP</div>
+      <div class="small-note">Ad-free · No analytics · Local-only storage</div>
+    </footer>
+  </div>
+
+  <script>
+    // Smooth scroll for in-page navigation and focus management for accessibility
+    document.querySelectorAll('nav.toc a.anchor').forEach(a => {
+      a.addEventListener('click', (e) => {
+        e.preventDefault();
+        const id = a.getAttribute('href').slice(1);
+        const target = document.getElementById(id);
+        if (target) {
+          // smooth scroll
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          // Move focus for keyboard users
+          target.setAttribute('tabindex', '-1');
+          target.focus({preventScroll:true});
+          window.setTimeout(()=> target.removeAttribute('tabindex'), 2000);
+        }
+      });
+    });
+
+    // IntersectionObserver to reveal sections with animation and update TOC active state
+    const sections = Array.from(document.querySelectorAll('main.policy .section'));
+    const tocLinks = Array.from(document.querySelectorAll('nav.toc a.anchor'));
+    const indicator = document.querySelector('nav.toc .indicator');
+
+    // Create a map of id -> link for quick lookup
+    const linkById = {};
+    tocLinks.forEach(l => {
+      const href = l.getAttribute('href') || '';
+      linkById[href.replace('#','')] = l;
+    });
+
+    // Reveal observer
+    const revealObs = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
+      });
+    }, { threshold: 0.12 });
+
+    sections.forEach(s => revealObs.observe(s));
+
+    // Active TOC observer for highlighting and moving the indicator
+    const activeObs = new IntersectionObserver((entries) => {
+      // choose the most visible section
+      const visible = entries.filter(e => e.isIntersecting).sort((a,b) => b.intersectionRatio - a.intersectionRatio);
+      if (visible.length > 0) {
+        const id = visible[0].target.id;
+        setActiveLink(id);
+      }
+    }, { root: null, threshold: new Array(20).fill(0).map((v,i)=> (i+1)/20) });
+
+    sections.forEach(s => activeObs.observe(s));
+
+    function setActiveLink(id) {
+      tocLinks.forEach(l => l.classList.remove('active'));
+      const link = linkById[id];
+      if (link) {
+        link.classList.add('active');
+        // animate indicator to match link position (desktop only)
+        if (indicator) {
+          const rect = link.getBoundingClientRect();
+          const tocRect = indicator.parentElement.getBoundingClientRect();
+          const relativeTop = rect.top - tocRect.top;
+          indicator.style.transform = `translateY(${relativeTop}px)`;
+          indicator.style.transition = 'transform 360ms cubic-bezier(.2,.9,.3,1)';
+          indicator.style.width = Math.max(64, rect.width) + 'px';
+        }
+      }
+    }
+
+    // initial active link
+    window.addEventListener('load', () => {
+      // reveal those in view
+      sections.forEach(s => {
+        const rect = s.getBoundingClientRect();
+        if (rect.top < window.innerHeight - 120) s.classList.add('visible');
+      });
+      // set the first active section
+      const inView = sections.find(s => s.classList.contains('visible'));
+      if (inView) setActiveLink(inView.id);
+    });
+
+    // subtle parallax on background shapes based on mouse (reduced motion considered)
+    if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      const shapeA = document.querySelector('.bg-shape.shape-a');
+      const shapeB = document.querySelector('.bg-shape.shape-b');
+      let w = window.innerWidth, h = window.innerHeight;
+      window.addEventListener('mousemove', (e) => {
+        const nx = (e.clientX - w/2)/w;
+        const ny = (e.clientY - h/2)/h;
+        if (shapeA) shapeA.style.transform = `translate3d(${nx * 18}px, ${ny * 18}px, 0) rotate(${nx * 6}deg)`;
+        if (shapeB) shapeB.style.transform = `translate3d(${nx * -26}px, ${ny * -18}px, 0) rotate(${ny * 6}deg)`;
+      });
+      window.addEventListener('resize', () => { w = window.innerWidth; h = window.innerHeight; });
+    }
+
+    // small enhancement: keyboard accessible jump to top via logo
+    document.querySelector('.logo').addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      document.getElementById('policy-title').focus();
+    });
+
+    // Respect reduced motion for animations
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      document.querySelectorAll('.section').forEach(s => {
+        s.style.transition = 'none';
+        s.classList.add('visible');
+      });
+      if (indicator) indicator.style.display = 'none';
+    }
+  </script>
+</body>
+</html>
