@@ -8,6 +8,13 @@
     <meta name="description"
         content="Clipitra Digital Services LLP offers professional graphic design, video editing, web design, and UI/UX solutions.">
 
+    <!-- Open Graph -->
+    <meta property="og:title" content="Clipitra Digital Services LLP - Creative & Reliable Digital Solutions">
+    <meta property="og:description"
+        content="Elevating your brand with professional Graphic Design, Web Development, and Video Editing services.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="logo.png">
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,12 +33,12 @@
 <body>
 
     <!-- Navigation -->
-    <nav class="navbar">
+    <nav class="navbar" aria-label="Main navigation">
         <div class="container">
-            <a href="#" class="logo">
-                <img src="logo.png" alt="Clipitra Digital Services" class="logo-img">
+            <a href="#" class="logo" aria-label="Clipitra Digital Services - Home">
+                <img src="logo.png" alt="Clipitra Digital Services" class="logo-img" loading="lazy">
             </a>
-            <div class="menu-toggle" id="mobile-menu">
+            <div class="menu-toggle" id="mobile-menu" aria-label="Toggle mobile menu" role="button" tabindex="0">
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
@@ -223,30 +230,45 @@
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer" id="footer">
+        <div class="footer-accent"></div>
         <div class="container">
             <div class="footer-content">
                 <div class="footer-brand">
-                    <h3>CLIPITRA</h3>
-                    <p>Digital Services LLP</p>
-                    <p class="llpin">LLPIN: ACR-0123</p>
+                    <div class="footer-logo">
+                        <img src="logo.png" alt="Clipitra Digital Services" class="footer-logo-img" loading="lazy">
+                        <div>
+                            <h3>CLIPITRA</h3>
+                            <span class="footer-brand-sub">Digital Services LLP</span>
+                        </div>
+                    </div>
+                    <p class="footer-tagline">Transforming ideas into digital reality with creative & reliable solutions.</p>
                 </div>
                 <div class="footer-links">
                     <h4>Quick Links</h4>
                     <ul>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#home"><i class="fas fa-chevron-right"></i>Home</a></li>
+                        <li><a href="#about"><i class="fas fa-chevron-right"></i>About</a></li>
+                        <li><a href="#services"><i class="fas fa-chevron-right"></i>Services</a></li>
+                        <li><a href="#contact"><i class="fas fa-chevron-right"></i>Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="terms.html"><i class="fas fa-chevron-right"></i>Terms & Conditions</a></li>
+                        <li><a href="refund-policy.html"><i class="fas fa-chevron-right"></i>Refund Policy</a></li>
+                        <li><a href="privacy-policy.html"><i class="fas fa-chevron-right"></i>Privacy Policy</a></li>
                     </ul>
                 </div>
                 <div class="footer-newsletter">
-                    <h4>Newsletter</h4>
-                    <p>Subscribe to get the latest updates and offers.</p>
+                    <h4>Stay Updated</h4>
+                    <p>Subscribe for the latest news, tips & exclusive offers.</p>
                     <form class="newsletter-form">
-                        <input type="email" placeholder="Your email" required>
-                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                        <input type="email" placeholder="Enter your email" required>
+                        <button type="submit" aria-label="Subscribe"><i class="fas fa-paper-plane"></i></button>
                     </form>
+                    <p class="newsletter-trust"><i class="fas fa-lock"></i> We respect your privacy. Unsubscribe anytime.</p>
                 </div>
             </div>
             <div class="footer-bottom">
@@ -255,9 +277,12 @@
         </div>
     </footer>
 
+    <!-- Scroll to Top Button -->
+    <button class="scroll-to-top" id="scrollToTop" aria-label="Scroll to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
     <script src="script.js"></script>
 </body>
 
 </html>
-
-
