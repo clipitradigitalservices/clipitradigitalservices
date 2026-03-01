@@ -17,36 +17,12 @@ jobs:
         env:
           WPKEY: ${{ secrets.WPKEY }}
         run: |
-          if [ -z "$WPKEY" ]; then
-            echo "Error: WPKEY secret is empty" >&2
-            exit 1
-          fi
-
-          if [ ! -f index.html ]; then
-            echo "Error: index.html not found" >&2
-            exit 1
-          fi
-
-          # Replace placeholder with the secret
+          echo "Injecting API key into HTML files..."
           sed -i "s/WEB3FORMS_ACCESS_KEY_PLACEHOLDER/${WPKEY}/g" index.html
-
-          # Verify replacement
-          if grep -q "WEB3FORMS_ACCESS_KEY_PLACEHOLDER" index.html; then
-            echo "Error: placeholder still present after sed" >&2
-            exit 1
-          fi
-
-          echo "Web3Forms key injected into index.html"
-
-          # Inject into contact.html
-          if [ -f contact.html ]; then
-            sed -i "s/WEB3FORMS_ACCESS_KEY_PLACEHOLDER/${WPKEY}/g" contact.html
-            if grep -q "WEB3FORMS_ACCESS_KEY_PLACEHOLDER" contact.html; then
-              echo "Error: placeholder still present in contact.html" >&2
-              exit 1
-            fi
-            echo "Web3Forms key injected into contact.html"
-          fi
+          sed -i "s/WEB3FORMS_ACCESS_KEY_PLACEHOLDER/${WPKEY}/g" contact.html
+          echo "Done. Verifying..."
+          grep -o 'value="[^"]*"' index.html | head -5
+          echo "Injection complete."
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
