@@ -38,13 +38,23 @@ jobs:
 
           echo "Web3Forms key injected into index.html"
 
+          # Inject into contact.html
+          if [ -f contact.html ]; then
+            sed -i "s/WEB3FORMS_ACCESS_KEY_PLACEHOLDER/${WPKEY}/g" contact.html
+            if grep -q "WEB3FORMS_ACCESS_KEY_PLACEHOLDER" contact.html; then
+              echo "Error: placeholder still present in contact.html" >&2
+              exit 1
+            fi
+            echo "Web3Forms key injected into contact.html"
+          fi
+
       - name: Setup Pages
         uses: actions/configure-pages@v4
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: '.'
+          path: "."
 
   deploy:
     environment:
